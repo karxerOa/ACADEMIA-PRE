@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Administrador.cs" />
     <Compile Include="ConexionBD.cs" />
+    <Compile Include="Controladores\ControladorEstudianteBase.cs" />
     <Compile Include="Controladores\ControladorUsuario.cs" />
     <Compile Include="Docente.cs" />
     <Compile Include="Estudiante.cs" />

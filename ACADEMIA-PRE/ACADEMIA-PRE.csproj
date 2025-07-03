@@ -73,6 +73,12 @@
     <Compile Include="MenúAdmin.Designer.cs">
       <DependentUpon>MenúAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Paneles\PanelGestionEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paneles\PanelGestionEstudiante.Designer.cs">
+      <DependentUpon>PanelGestionEstudiante.cs</DependentUpon>
+    </Compile>
     <Compile Include="Paneles\PanelInicioAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenúDocente.resx">
       <DependentUpon>MenúDocente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paneles\PanelGestionEstudiante.resx">
+      <DependentUpon>PanelGestionEstudiante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Paneles\PanelInicioAdmin.resx">
       <DependentUpon>PanelInicioAdmin.cs</DependentUpon>
