@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnGestionEstudiante = new System.Windows.Forms.Button();
-            this.btnGestionDocente = new System.Windows.Forms.Button();
-            this.btnGestionCursos = new System.Windows.Forms.Button();
             this.btnGestionSimulacros = new System.Windows.Forms.Button();
+            this.btnGestionCursos = new System.Windows.Forms.Button();
+            this.btnGestionDocente = new System.Windows.Forms.Button();
+            this.btnGestionEstudiante = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -56,50 +56,41 @@
             this.panel1.Size = new System.Drawing.Size(206, 509);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // btnGestionSimulacros
             // 
-            this.panel2.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(210, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(716, 71);
-            this.panel2.TabIndex = 1;
+            this.btnGestionSimulacros.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnGestionSimulacros.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGestionSimulacros.ForeColor = System.Drawing.Color.MintCream;
+            this.btnGestionSimulacros.Location = new System.Drawing.Point(0, 382);
+            this.btnGestionSimulacros.Name = "btnGestionSimulacros";
+            this.btnGestionSimulacros.Size = new System.Drawing.Size(206, 71);
+            this.btnGestionSimulacros.TabIndex = 5;
+            this.btnGestionSimulacros.Text = "Gestión simulacros";
+            this.btnGestionSimulacros.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // btnGestionCursos
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(3, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(189, 32);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "MENÚ ADMIN";
+            this.btnGestionCursos.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnGestionCursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGestionCursos.ForeColor = System.Drawing.Color.MintCream;
+            this.btnGestionCursos.Location = new System.Drawing.Point(0, 305);
+            this.btnGestionCursos.Name = "btnGestionCursos";
+            this.btnGestionCursos.Size = new System.Drawing.Size(206, 71);
+            this.btnGestionCursos.TabIndex = 4;
+            this.btnGestionCursos.Text = "Gestión de cursos y áreas";
+            this.btnGestionCursos.UseVisualStyleBackColor = false;
             // 
-            // label2
+            // btnGestionDocente
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label2.Location = new System.Drawing.Point(3, 48);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(195, 33);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "------------------";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Sans Serif Collection", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(69, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(548, 72);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "BIENVENIDO, ¿QUÉ DESEA HACER EL DÍA DE HOY?";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.btnGestionDocente.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnGestionDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGestionDocente.ForeColor = System.Drawing.Color.MintCream;
+            this.btnGestionDocente.Location = new System.Drawing.Point(-3, 228);
+            this.btnGestionDocente.Name = "btnGestionDocente";
+            this.btnGestionDocente.Size = new System.Drawing.Size(209, 71);
+            this.btnGestionDocente.TabIndex = 3;
+            this.btnGestionDocente.Text = "Gestión docentes";
+            this.btnGestionDocente.UseVisualStyleBackColor = false;
             // 
             // btnGestionEstudiante
             // 
@@ -114,41 +105,50 @@
             this.btnGestionEstudiante.UseVisualStyleBackColor = false;
             this.btnGestionEstudiante.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnGestionDocente
+            // label2
             // 
-            this.btnGestionDocente.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnGestionDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGestionDocente.ForeColor = System.Drawing.Color.MintCream;
-            this.btnGestionDocente.Location = new System.Drawing.Point(-3, 228);
-            this.btnGestionDocente.Name = "btnGestionDocente";
-            this.btnGestionDocente.Size = new System.Drawing.Size(209, 71);
-            this.btnGestionDocente.TabIndex = 3;
-            this.btnGestionDocente.Text = "Gestión docentes";
-            this.btnGestionDocente.UseVisualStyleBackColor = false;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label2.Location = new System.Drawing.Point(3, 48);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(195, 33);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "------------------";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // btnGestionCursos
+            // label1
             // 
-            this.btnGestionCursos.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnGestionCursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGestionCursos.ForeColor = System.Drawing.Color.MintCream;
-            this.btnGestionCursos.Location = new System.Drawing.Point(0, 305);
-            this.btnGestionCursos.Name = "btnGestionCursos";
-            this.btnGestionCursos.Size = new System.Drawing.Size(206, 71);
-            this.btnGestionCursos.TabIndex = 4;
-            this.btnGestionCursos.Text = "Gestión de cursos y áreas";
-            this.btnGestionCursos.UseVisualStyleBackColor = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(3, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(189, 32);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "MENÚ ADMIN";
             // 
-            // btnGestionSimulacros
+            // panel2
             // 
-            this.btnGestionSimulacros.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnGestionSimulacros.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGestionSimulacros.ForeColor = System.Drawing.Color.MintCream;
-            this.btnGestionSimulacros.Location = new System.Drawing.Point(0, 382);
-            this.btnGestionSimulacros.Name = "btnGestionSimulacros";
-            this.btnGestionSimulacros.Size = new System.Drawing.Size(206, 71);
-            this.btnGestionSimulacros.TabIndex = 5;
-            this.btnGestionSimulacros.Text = "Gestión simulacros";
-            this.btnGestionSimulacros.UseVisualStyleBackColor = false;
+            this.panel2.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Location = new System.Drawing.Point(210, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(716, 71);
+            this.panel2.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Sans Serif Collection", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(69, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(548, 72);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "BIENVENIDO, ¿QUÉ DESEA HACER EL DÍA DE HOY?";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // panel3
             // 

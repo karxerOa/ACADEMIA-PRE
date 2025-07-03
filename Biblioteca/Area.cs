@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Biblioteca
 {
-    internal class Area
+    public class Area
     {
     }
 }
