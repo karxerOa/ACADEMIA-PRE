@@ -32,7 +32,7 @@ namespace ACADEMIA_PRE
 
             if (controlador.ValidarUsuario(nombre, contraseña, rolSeleccionado))
             {
-                MessageBox.Show($"Bienvenido {nombre} - Rol: {rolSeleccionado}");
+                MessageBox.Show($"Bienvenido {nombre}");
 
                 if (rolSeleccionado == "Administrador")
                     new MenúAdmin().Show();

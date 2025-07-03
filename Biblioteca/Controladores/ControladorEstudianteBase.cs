@@ -32,6 +32,9 @@ namespace Biblioteca.Controladores
                 while (reader.Read())
                 {
                     cantidad++;
+
+
+
                 }
 
                 reader.Close();
