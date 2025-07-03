@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RJCodeAdvance.RJControls.1.0.0\lib\net45\RJCodeAdvance.RJControls.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -70,6 +73,12 @@
     <Compile Include="MenúAdmin.Designer.cs">
       <DependentUpon>MenúAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Paneles\PanelInicioAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paneles\PanelInicioAdmin.Designer.cs">
+      <DependentUpon>PanelInicioAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="USUARIO.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +96,9 @@
     <EmbeddedResource Include="MenúDocente.resx">
       <DependentUpon>MenúDocente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Paneles\PanelInicioAdmin.resx">
+      <DependentUpon>PanelInicioAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="USUARIO.resx">
       <DependentUpon>USUARIO.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,6 +112,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -1,6 +1,6 @@
-﻿namespace ACADEMIA_PRE
+﻿namespace ACADEMIA_PRE.Paneles
 {
-    partial class MenúDocente
+    partial class PanelInicioAdmin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,21 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // MenúDocente
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(345, 150);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "HOLAA";
+            // 
+            // PanelInicioAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Name = "MenúDocente";
-            this.Text = "Menú Docente";
-            this.Load += new System.EventHandler(this.MenúDocente_Load);
+            this.ClientSize = new System.Drawing.Size(740, 396);
+            this.Controls.Add(this.label1);
+            this.Name = "PanelInicioAdmin";
+            this.Text = "PanelInicioAdmin";
+            this.Load += new System.EventHandler(this.PanelInicioAdmin_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label1;
     }
 }

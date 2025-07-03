@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ACADEMIA_PRE
+namespace ACADEMIA_PRE.Paneles
 {
-    public partial class MenúDocente : Form
+    public partial class PanelInicioAdmin : Form
     {
-        public MenúDocente()
+        public PanelInicioAdmin()
         {
             InitializeComponent();
         }
 
-        private void MenúDocente_Load(object sender, EventArgs e)
+        private void PanelInicioAdmin_Load(object sender, EventArgs e)
         {
 
         }
