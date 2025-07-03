@@ -44,12 +44,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Administrador.cs" />
+    <Compile Include="Area.cs" />
+    <Compile Include="Asistencia.cs" />
+    <Compile Include="Carrera.cs" />
     <Compile Include="ConexionBD.cs" />
     <Compile Include="Controladores\ControladorUsuario.cs" />
+    <Compile Include="Curso.cs" />
+    <Compile Include="CursoArea.cs" />
     <Compile Include="Docente.cs" />
     <Compile Include="Estudiante.cs" />
+    <Compile Include="Matricula.cs" />
+    <Compile Include="Pago.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reporte.cs" />
+    <Compile Include="Simulacro.cs" />
     <Compile Include="Usuario.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
