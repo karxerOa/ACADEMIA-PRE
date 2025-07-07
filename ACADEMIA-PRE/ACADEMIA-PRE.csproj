@@ -122,5 +122,10 @@
       <Name>Biblioteca</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="PanelesAdmin\" />
+    <Folder Include="PanelesDocente\" />
+    <Folder Include="PanelesEstudiante\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
