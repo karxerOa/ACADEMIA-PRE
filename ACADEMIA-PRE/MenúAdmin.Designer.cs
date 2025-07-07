@@ -37,7 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panelContenedor = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -150,25 +150,27 @@
             this.label3.Text = "BIENVENIDO, ¿QUÉ DESEA HACER EL DÍA DE HOY?";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // panel3
+            // panelContenedor
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel3.Location = new System.Drawing.Point(211, 76);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(715, 434);
-            this.panel3.TabIndex = 2;
+            this.panelContenedor.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelContenedor.Location = new System.Drawing.Point(211, 76);
+            this.panelContenedor.Name = "panelContenedor";
+            this.panelContenedor.Size = new System.Drawing.Size(715, 434);
+            this.panelContenedor.TabIndex = 2;
+            this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // MenúAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(922, 512);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "MenúAdmin";
             this.Text = "Menú administrador";
+            this.Load += new System.EventHandler(this.MenúAdmin_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -188,6 +190,6 @@
         private System.Windows.Forms.Button btnGestionDocente;
         private System.Windows.Forms.Button btnGestionEstudiante;
         private System.Windows.Forms.Button btnGestionSimulacros;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panelContenedor;
     }
 }

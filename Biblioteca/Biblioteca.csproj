@@ -48,6 +48,7 @@
     <Compile Include="Asistencia.cs" />
     <Compile Include="Carrera.cs" />
     <Compile Include="Conexion\ConexionBD.cs" />
+    <Compile Include="Controladores\ControladorMatricula.cs" />
     <Compile Include="Controladores\ControladorUsuario.cs" />
     <Compile Include="Curso.cs" />
     <Compile Include="CursoArea.cs" />
