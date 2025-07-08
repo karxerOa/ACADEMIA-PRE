@@ -48,7 +48,7 @@
             this.comboxCarrera = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblArea = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -219,15 +219,15 @@
             this.label11.TabIndex = 18;
             this.label11.Text = "ÁREA A LA QUE PERTENECE";
             // 
-            // label12
+            // lblArea
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(817, 256);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(43, 42);
-            this.label12.TabIndex = 19;
-            this.label12.Text = "A";
+            this.lblArea.AutoSize = true;
+            this.lblArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArea.Location = new System.Drawing.Point(817, 256);
+            this.lblArea.Name = "lblArea";
+            this.lblArea.Size = new System.Drawing.Size(43, 42);
+            this.lblArea.TabIndex = 19;
+            this.lblArea.Text = "A";
             // 
             // PanelRegistrarEstudiante
             // 
@@ -235,7 +235,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1075, 434);
-            this.Controls.Add(this.label12);
+            this.Controls.Add(this.lblArea);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.comboxCarrera);
@@ -284,6 +284,6 @@
         private System.Windows.Forms.ComboBox comboxCarrera;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblArea;
     }
 }
