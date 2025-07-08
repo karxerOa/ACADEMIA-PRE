@@ -145,7 +145,8 @@ namespace ACADEMIA_PRE
             return cursos;
         }
 
-        private void btnVerDetalle_Click(object sender, EventArgs e)
+
+        private void btnVerDetalle_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -182,7 +183,5 @@ namespace ACADEMIA_PRE
                                 "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-
     }
 }

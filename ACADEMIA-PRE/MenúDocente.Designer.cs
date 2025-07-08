@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelHeader = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.picIcono = new System.Windows.Forms.PictureBox();
@@ -40,8 +38,6 @@
             this.btnVerDetalle = new System.Windows.Forms.Button();
             this.panelCursos = new System.Windows.Forms.Panel();
             this.dgvCursos = new System.Windows.Forms.DataGridView();
-            this.colIdCurso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDenominacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblTituloCursos = new System.Windows.Forms.Label();
             this.panelInfo = new System.Windows.Forms.Panel();
             this.lbl_NombreDocente = new System.Windows.Forms.Label();
@@ -123,6 +119,7 @@
             this.btnVerDetalle.TabIndex = 0;
             this.btnVerDetalle.Text = "🔍 Ver Detalle del Curso";
             this.btnVerDetalle.UseVisualStyleBackColor = false;
+            this.btnVerDetalle.Click += new System.EventHandler(this.btnVerDetalle_Click_1);
             // 
             // panelCursos
             // 
@@ -144,19 +141,16 @@
             this.dgvCursos.BackgroundColor = System.Drawing.Color.White;
             this.dgvCursos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvCursos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCursos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCursos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvCursos.ColumnHeadersHeight = 40;
             this.dgvCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvCursos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colIdCurso,
-            this.colDenominacion});
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -178,29 +172,6 @@
             this.dgvCursos.Size = new System.Drawing.Size(900, 330);
             this.dgvCursos.TabIndex = 1;
             this.dgvCursos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCursos_CellContentClick);
-            // 
-            // colIdCurso
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.colIdCurso.DefaultCellStyle = dataGridViewCellStyle2;
-            this.colIdCurso.FillWeight = 25F;
-            this.colIdCurso.HeaderText = "ID Curso";
-            this.colIdCurso.MinimumWidth = 6;
-            this.colIdCurso.Name = "colIdCurso";
-            this.colIdCurso.ReadOnly = true;
-            // 
-            // colDenominacion
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.colDenominacion.DefaultCellStyle = dataGridViewCellStyle3;
-            this.colDenominacion.FillWeight = 75F;
-            this.colDenominacion.HeaderText = "Denominación";
-            this.colDenominacion.MinimumWidth = 6;
-            this.colDenominacion.Name = "colDenominacion";
-            this.colDenominacion.ReadOnly = true;
             // 
             // lblTituloCursos
             // 
@@ -286,8 +257,6 @@
         private System.Windows.Forms.Button btnVerDetalle;
         private System.Windows.Forms.Panel panelCursos;
         private System.Windows.Forms.DataGridView dgvCursos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colIdCurso;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDenominacion;
         private System.Windows.Forms.Label lblTituloCursos;
         private System.Windows.Forms.Panel panelInfo;
         private System.Windows.Forms.Label lblDatosDocente;
