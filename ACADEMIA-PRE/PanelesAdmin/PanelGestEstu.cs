@@ -27,5 +27,11 @@ namespace ACADEMIA_PRE.PanelesAdmin
             PanelRegistrarEstudiante frm = new PanelRegistrarEstudiante();
             frm.ShowDialog();
         }
+
+        private void btnMatriculas_Click(object sender, EventArgs e)
+        {
+            EstudiantesMatriculas est = new EstudiantesMatriculas();
+            est.ShowDialog();
+        }
     }
 }

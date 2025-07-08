@@ -103,6 +103,11 @@ namespace ACADEMIA_PRE
             //    MessageBox.Show($"Curso seleccionado: {denominacion} (ID: {idCurso})");
             //}
         }
+
+        private void panelMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
         //        private void CargarCursosDocente()
         //        {
         //            DataTable cursos = ObtenerCursosDocente(idDocenteActual); // Usar el ID real
@@ -154,5 +159,5 @@ namespace ACADEMIA_PRE
 
         //            return cursos;
         //        }
-        }
     }
+}

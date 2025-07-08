@@ -49,6 +49,9 @@
     <Compile Include="Asistencia.cs" />
     <Compile Include="Carrera.cs" />
     <Compile Include="Conexion\ConexionBD.cs" />
+    <Compile Include="Controladores\ControladorApoderado.cs" />
+    <Compile Include="Controladores\ControladorCarreras.cs" />
+    <Compile Include="Controladores\ControladorEstudiante.cs" />
     <Compile Include="Controladores\ControladorMatricula.cs" />
     <Compile Include="Controladores\ControladorUsuario.cs" />
     <Compile Include="Curso.cs" />

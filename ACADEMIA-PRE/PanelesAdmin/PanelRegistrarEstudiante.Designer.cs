@@ -49,7 +49,23 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.lblArea = new System.Windows.Forms.Label();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtContraseña = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.gbUsuario = new System.Windows.Forms.GroupBox();
+            this.btnRegistrar = new System.Windows.Forms.Button();
+            this.txtApoderado = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtCelular = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.rbSíApoderado = new System.Windows.Forms.RadioButton();
+            this.rbNoApoderado = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.gbUsuario.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -199,6 +215,7 @@
             this.comboxCarrera.Name = "comboxCarrera";
             this.comboxCarrera.Size = new System.Drawing.Size(193, 21);
             this.comboxCarrera.TabIndex = 16;
+            this.comboxCarrera.SelectedIndexChanged += new System.EventHandler(this.comboxCarrera_SelectedIndexChanged);
             // 
             // label10
             // 
@@ -229,12 +246,157 @@
             this.lblArea.TabIndex = 19;
             this.lblArea.Text = "A";
             // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Location = new System.Drawing.Point(132, 23);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(186, 20);
+            this.txtUsuario.TabIndex = 21;
+            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(25, 23);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(74, 22);
+            this.label12.TabIndex = 20;
+            this.label12.Text = "Usuario:";
+            // 
+            // txtContraseña
+            // 
+            this.txtContraseña.Location = new System.Drawing.Point(132, 61);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.Size = new System.Drawing.Size(186, 20);
+            this.txtContraseña.TabIndex = 23;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(25, 59);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(101, 22);
+            this.label13.TabIndex = 22;
+            this.label13.Text = "Contraseña:";
+            // 
+            // gbUsuario
+            // 
+            this.gbUsuario.Controls.Add(this.txtContraseña);
+            this.gbUsuario.Controls.Add(this.label13);
+            this.gbUsuario.Controls.Add(this.txtUsuario);
+            this.gbUsuario.Controls.Add(this.label12);
+            this.gbUsuario.Location = new System.Drawing.Point(607, 349);
+            this.gbUsuario.Name = "gbUsuario";
+            this.gbUsuario.Size = new System.Drawing.Size(368, 91);
+            this.gbUsuario.TabIndex = 24;
+            this.gbUsuario.TabStop = false;
+            this.gbUsuario.Text = "Creación de usuario";
+            // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.Location = new System.Drawing.Point(760, 466);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(75, 23);
+            this.btnRegistrar.TabIndex = 25;
+            this.btnRegistrar.Text = "Regsitrar";
+            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            // 
+            // txtApoderado
+            // 
+            this.txtApoderado.Location = new System.Drawing.Point(24, 56);
+            this.txtApoderado.Name = "txtApoderado";
+            this.txtApoderado.Size = new System.Drawing.Size(186, 20);
+            this.txtApoderado.TabIndex = 27;
+            this.txtApoderado.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(31, 31);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(76, 22);
+            this.label14.TabIndex = 26;
+            this.label14.Text = "Nombre:";
+            // 
+            // txtCelular
+            // 
+            this.txtCelular.Location = new System.Drawing.Point(24, 113);
+            this.txtCelular.Name = "txtCelular";
+            this.txtCelular.Size = new System.Drawing.Size(186, 20);
+            this.txtCelular.TabIndex = 29;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(31, 88);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(155, 22);
+            this.label15.TabIndex = 28;
+            this.label15.Text = "Número de celular:";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label16);
+            this.groupBox1.Controls.Add(this.txtCelular);
+            this.groupBox1.Controls.Add(this.rbNoApoderado);
+            this.groupBox1.Controls.Add(this.label15);
+            this.groupBox1.Controls.Add(this.rbSíApoderado);
+            this.groupBox1.Controls.Add(this.txtApoderado);
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Location = new System.Drawing.Point(28, 410);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(427, 164);
+            this.groupBox1.TabIndex = 30;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "APODERADO";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(252, 56);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(100, 13);
+            this.label16.TabIndex = 33;
+            this.label16.Text = "¿Tiene apoderado?";
+            // 
+            // rbSíApoderado
+            // 
+            this.rbSíApoderado.AutoSize = true;
+            this.rbSíApoderado.Location = new System.Drawing.Point(289, 77);
+            this.rbSíApoderado.Name = "rbSíApoderado";
+            this.rbSíApoderado.Size = new System.Drawing.Size(36, 17);
+            this.rbSíApoderado.TabIndex = 31;
+            this.rbSíApoderado.TabStop = true;
+            this.rbSíApoderado.Text = "Sí";
+            this.rbSíApoderado.UseVisualStyleBackColor = true;
+            this.rbSíApoderado.CheckedChanged += new System.EventHandler(this.rbSíApoderado_CheckedChanged);
+            // 
+            // rbNoApoderado
+            // 
+            this.rbNoApoderado.AutoSize = true;
+            this.rbNoApoderado.Location = new System.Drawing.Point(289, 100);
+            this.rbNoApoderado.Name = "rbNoApoderado";
+            this.rbNoApoderado.Size = new System.Drawing.Size(39, 17);
+            this.rbNoApoderado.TabIndex = 32;
+            this.rbNoApoderado.TabStop = true;
+            this.rbNoApoderado.Text = "No";
+            this.rbNoApoderado.UseVisualStyleBackColor = true;
+            this.rbNoApoderado.CheckedChanged += new System.EventHandler(this.rbNoApoderado_CheckedChanged);
+            // 
             // PanelRegistrarEstudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(1075, 434);
+            this.ClientSize = new System.Drawing.Size(1075, 584);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.btnRegistrar);
+            this.Controls.Add(this.gbUsuario);
             this.Controls.Add(this.lblArea);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -257,7 +419,12 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "PanelRegistrarEstudiante";
             this.Text = "PanelRegistrarEstudiante";
+            this.Load += new System.EventHandler(this.PanelRegistrarEstudiante_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.gbUsuario.ResumeLayout(false);
+            this.gbUsuario.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,5 +452,19 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lblArea;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtContraseña;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.GroupBox gbUsuario;
+        private System.Windows.Forms.Button btnRegistrar;
+        private System.Windows.Forms.TextBox txtApoderado;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txtCelular;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.RadioButton rbNoApoderado;
+        private System.Windows.Forms.RadioButton rbSíApoderado;
     }
 }

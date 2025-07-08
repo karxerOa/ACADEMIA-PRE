@@ -15,7 +15,6 @@ namespace Biblioteca
         private int edad;
         private string dni;
         private string telefono;
-
         public string Nombre
         {
             get => nombre;
@@ -28,7 +27,6 @@ namespace Biblioteca
                 nombre = value;
             }
         }
-
         public string ApellidoPaterno
         {
             get => apellidoPaterno;
@@ -41,7 +39,6 @@ namespace Biblioteca
                 apellidoPaterno = value;
             }
         }
-
         public string ApellidoMaterno
         {
             get => apellidoMaterno;
@@ -60,12 +57,11 @@ namespace Biblioteca
             get => edad;
             set
             {
-                if (value < 0 || value > 120)
-                    throw new ArgumentException("La edad debe estar entre 0 y 120.");
+                if (value < 14 || value > 50)
+                    throw new ArgumentException("La edad debe estar entre 14 y 50.");
                 edad = value;
             }
         }
-
         public string DNI
         {
             get => dni;
@@ -76,7 +72,6 @@ namespace Biblioteca
                 dni = value;
             }
         }
-
         public string Telefono
         {
             get => telefono;
@@ -99,7 +94,6 @@ namespace Biblioteca
             DNI = dni;
             Telefono = telefono;
         }
-
         public virtual string ObtenerInformacion()
         {
             return $"{Nombre} {ApellidoPaterno} {ApellidoMaterno}, Edad: {Edad}, DNI: {DNI}, Teléfono: {Telefono}";

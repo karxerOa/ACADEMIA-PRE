@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EstudiantesMatriculas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EstudiantesMatriculas.Designer.cs">
+      <DependentUpon>EstudiantesMatriculas.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenúDocente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,12 @@
     </Compile>
     <Compile Include="MenúAdmin.Designer.cs">
       <DependentUpon>MenúAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanelesAdmin\MatricularEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PanelesAdmin\MatricularEstudiante.Designer.cs">
+      <DependentUpon>MatricularEstudiante.cs</DependentUpon>
     </Compile>
     <Compile Include="PanelesAdmin\PanelGestEstu.cs">
       <SubType>Form</SubType>
@@ -96,6 +108,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="EstudiantesMatriculas.resx">
+      <DependentUpon>EstudiantesMatriculas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -104,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenúDocente.resx">
       <DependentUpon>MenúDocente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelesAdmin\MatricularEstudiante.resx">
+      <DependentUpon>MatricularEstudiante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PanelesAdmin\PanelGestEstu.resx">
       <DependentUpon>PanelGestEstu.cs</DependentUpon>

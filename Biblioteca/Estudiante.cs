@@ -17,23 +17,22 @@ namespace Biblioteca
         
         }
         public Estudiante(
-         string idEstudiante,
-         string nombre,
-         string apellidoPaterno,
-         string apellidoMaterno,
-         int edad,
-         string dni,
-         string telefono,
-         Carrera carrera,
-         Usuario usuario,
-         Apoderado apoderado = null 
-     ) : base(nombre, apellidoPaterno, apellidoMaterno, edad, dni, telefono)
-        {
-            IdEstudiante = idEstudiante;
-            Carrera = carrera;
-            Usuario = usuario;
-            Apoderado = apoderado;
-        }
-
+             string idEstudiante,
+             string nombre,
+             string apellidoPaterno,
+             string apellidoMaterno,
+             int edad,
+             string dni,
+             string telefono,
+             Carrera carrera,
+             Usuario usuario,
+             Apoderado apoderado = null 
+         ) : base(nombre, apellidoPaterno, apellidoMaterno, edad, dni, telefono)
+            {
+                IdEstudiante = idEstudiante;
+                Carrera = carrera;
+                Usuario = usuario;
+                Apoderado = apoderado;
+        }   
     }
 }

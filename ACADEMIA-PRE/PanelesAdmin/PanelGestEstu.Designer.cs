@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnEntradaRegistrar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnMatriculas = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -47,15 +48,15 @@
             this.panel1.Size = new System.Drawing.Size(264, 342);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // btnEntradaRegistrar
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(373, 27);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(264, 342);
-            this.panel2.TabIndex = 1;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.btnEntradaRegistrar.Location = new System.Drawing.Point(79, 156);
+            this.btnEntradaRegistrar.Name = "btnEntradaRegistrar";
+            this.btnEntradaRegistrar.Size = new System.Drawing.Size(75, 23);
+            this.btnEntradaRegistrar.TabIndex = 3;
+            this.btnEntradaRegistrar.Text = "Entrar";
+            this.btnEntradaRegistrar.UseVisualStyleBackColor = true;
+            this.btnEntradaRegistrar.Click += new System.EventHandler(this.btnEntradaRegistrar_Click);
             // 
             // label1
             // 
@@ -67,6 +68,17 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "REGISTRAR DE ESTUDIANTE";
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Controls.Add(this.btnMatriculas);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Location = new System.Drawing.Point(373, 27);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(264, 342);
+            this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -77,15 +89,15 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "MATRÍCULAS";
             // 
-            // btnEntradaRegistrar
+            // btnMatriculas
             // 
-            this.btnEntradaRegistrar.Location = new System.Drawing.Point(79, 156);
-            this.btnEntradaRegistrar.Name = "btnEntradaRegistrar";
-            this.btnEntradaRegistrar.Size = new System.Drawing.Size(75, 23);
-            this.btnEntradaRegistrar.TabIndex = 3;
-            this.btnEntradaRegistrar.Text = "Entrar";
-            this.btnEntradaRegistrar.UseVisualStyleBackColor = true;
-            this.btnEntradaRegistrar.Click += new System.EventHandler(this.btnEntradaRegistrar_Click);
+            this.btnMatriculas.Location = new System.Drawing.Point(93, 156);
+            this.btnMatriculas.Name = "btnMatriculas";
+            this.btnMatriculas.Size = new System.Drawing.Size(75, 23);
+            this.btnMatriculas.TabIndex = 4;
+            this.btnMatriculas.Text = "Entrar";
+            this.btnMatriculas.UseVisualStyleBackColor = true;
+            this.btnMatriculas.Click += new System.EventHandler(this.btnMatriculas_Click);
             // 
             // PanelGestEstu
             // 
@@ -111,5 +123,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnEntradaRegistrar;
+        private System.Windows.Forms.Button btnMatriculas;
     }
 }

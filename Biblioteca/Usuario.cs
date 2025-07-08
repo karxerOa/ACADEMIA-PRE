@@ -11,6 +11,7 @@ namespace Biblioteca
 {
     public class Usuario
     {
+        public string Id_usuario;
         private string user;
         private string contraseña;
         private string rol;
@@ -48,12 +49,24 @@ namespace Biblioteca
         }
         public Usuario() { }
 
-        public Usuario(string user, string contraseña, string rol)
+        public Usuario(string user, string contraseña, string rol, string id_usuario)
         {
             User = user;
             Contraseña = contraseña;
-            Rol = rol;  
+            Rol = rol;
+            Id_usuario = id_usuario;
         }
+        public string Id_usuario1
+        {
+            get { return Id_usuario; }
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                    throw new ArgumentException("El ID de usuario no puede ir en blanco");
+                Id_usuario = value;
+            }
+        }
+
         public bool ValidarConSP(string CadenaConexion)
         {
             try
