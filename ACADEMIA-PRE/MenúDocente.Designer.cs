@@ -74,7 +74,7 @@
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
             this.lblTitulo.Location = new System.Drawing.Point(80, 25);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(178, 32);
+            this.lblTitulo.Size = new System.Drawing.Size(218, 41);
             this.lblTitulo.TabIndex = 1;
             this.lblTitulo.Text = "Panel Docente";
             // 
@@ -99,7 +99,6 @@
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(1000, 620);
             this.panelMain.TabIndex = 1;
-            this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
             // 
             // panelBotones
             // 
@@ -211,7 +210,7 @@
             this.lblTituloCursos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.lblTituloCursos.Location = new System.Drawing.Point(20, 15);
             this.lblTituloCursos.Name = "lblTituloCursos";
-            this.lblTituloCursos.Size = new System.Drawing.Size(196, 25);
+            this.lblTituloCursos.Size = new System.Drawing.Size(258, 32);
             this.lblTituloCursos.TabIndex = 0;
             this.lblTituloCursos.Text = "📚 Cursos Asignados";
             // 
@@ -232,7 +231,7 @@
             this.lbl_NombreDocente.Font = new System.Drawing.Font("Sitka Subheading Semibold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_NombreDocente.Location = new System.Drawing.Point(37, 24);
             this.lbl_NombreDocente.Name = "lbl_NombreDocente";
-            this.lbl_NombreDocente.Size = new System.Drawing.Size(87, 29);
+            this.lbl_NombreDocente.Size = new System.Drawing.Size(106, 36);
             this.lbl_NombreDocente.TabIndex = 1;
             this.lbl_NombreDocente.Text = "Nombre";
             this.lbl_NombreDocente.Click += new System.EventHandler(this.lbl_NombreDocente_Click);
@@ -245,12 +244,12 @@
             this.lblDatosDocente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.lblDatosDocente.Location = new System.Drawing.Point(20, 15);
             this.lblDatosDocente.Name = "lblDatosDocente";
-            this.lblDatosDocente.Size = new System.Drawing.Size(0, 21);
+            this.lblDatosDocente.Size = new System.Drawing.Size(0, 28);
             this.lblDatosDocente.TabIndex = 0;
             // 
             // MenúDocente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
             this.ClientSize = new System.Drawing.Size(1000, 700);

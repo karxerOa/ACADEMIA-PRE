@@ -51,29 +51,7 @@ namespace ACADEMIA_PRE
 
         }
 
-        private string ObtenerIdDocente(string nombreUsuario)
-        {
-            using (SqlConnection connection = new SqlConnection(ConexionBD.CadenaConexion))
-            {
-                try
-                {
-                    connection.Open();
-                    string query = "SELECT id_docente FROM Docente WHERE Nombre = @Nombre";
-
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        command.Parameters.AddWithValue("@Nombre", nombreUsuario);
-                        object result = command.ExecuteScalar();
-                        return result?.ToString() ?? "";
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al obtener ID del docente: " + ex.Message);
-                    return "";
-                }
-            }
-        }
+       
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 

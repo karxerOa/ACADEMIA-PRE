@@ -32,16 +32,18 @@ namespace ACADEMIA_PRE
         private void MenúDocente_Load(object sender, EventArgs e)
         {
             lbl_NombreDocente_Click(this, new EventArgs());
-            dgvCursos_CellContentClick(sender, new DataGridViewCellEventArgs(0, 0));
+            //dgvCursos_CellContentClick(sender, new DataGridViewCellEventArgs(0, 0));
         }
 
         private void lbl_NombreDocente_Click(object sender, EventArgs e)
         {
-            string nombreDocente = ObtenerNombreDocente(idDocenteActual); // Usar el ID real
+            string idDocente = "D001";
 
-            if (!string.IsNullOrEmpty(nombreDocente))
+            string nombreCompleto = ObtenerNombreCompleto(idDocente);
+
+            if (!string.IsNullOrEmpty(nombreCompleto))
             {
-                lbl_NombreDocente.Text = nombreDocente;
+                lbl_NombreDocente.Text = nombreCompleto;
             }
             else
             {
@@ -49,17 +51,14 @@ namespace ACADEMIA_PRE
             }
         }
 
-        private string ObtenerNombreDocente(string idDocente)
+        private string ObtenerNombreCompleto(string idDocente)
         {
-            string nombreDocente = "";
-
             using (SqlConnection connection = new SqlConnection(ConexionBD.CadenaConexion))
             {
                 try
                 {
                     connection.Open();
 
-                    // Modificamos la consulta para obtener nombre completo
                     string query = "SELECT Nombre, Apellido_paterno, Apellido_materno FROM Docente WHERE id_docente = @id_docente";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
@@ -71,93 +70,82 @@ namespace ACADEMIA_PRE
                             if (reader.Read())
                             {
                                 string nombre = reader["Nombre"].ToString();
-                                string apellidoPaterno = reader["Apellido_paterno"].ToString();
-                                string apellidoMaterno = reader["Apellido_materno"].ToString();
+                                string apellidoPaterno = reader["Apellido_Paterno"].ToString();
+                                string apellidoMaterno = reader["Apellido_Materno"].ToString();
 
-                                // Concatenamos el nombre completo
-                                nombreDocente = $"{nombre} {apellidoPaterno} {apellidoMaterno}";
+                                return $"{nombre} {apellidoPaterno} {apellidoMaterno}";
                             }
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error al obtener el nombre del docente: " + ex.Message,
+                    MessageBox.Show("Error al cargar el nombre del docente: " + ex.Message,
                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 
-            return nombreDocente;
-        }
+            return string.Empty;
 
-        //Mostrar cursos del docente
+            //Mostrar cursos del docente
+
+
+        }
 
         private void dgvCursos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //if (e.RowIndex >= 0)
-            //{
-            //    // Usar índice en lugar de nombre
-            //    string idCurso = dgvCursos.Rows[e.RowIndex].Cells[0].Value.ToString(); // Primera columna
-            //    string denominacion = dgvCursos.Rows[e.RowIndex].Cells[1].Value.ToString(); // Segunda columna
-
-            //    MessageBox.Show($"Curso seleccionado: {denominacion} (ID: {idCurso})");
-            //}
+            string idDocente = "D001"; // Aquí deberías usar el ID real del login
+            DataTable cursos = ObtenerCursosDocente(idDocente);
+            if (cursos.Rows.Count > 0)
+            {
+                dgvCursos.DataSource = cursos;
+                // Configurar columnas según tu diseño
+                dgvCursos.Columns["id_curso"].HeaderText = "ID Curso";
+                dgvCursos.Columns["Denominacion"].HeaderText = "Denominación";
+            }
+            else
+            {
+                MessageBox.Show("No tienes cursos asignados", "Información",
+                               MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
-        private void panelMain_Paint(object sender, PaintEventArgs e)
+
+        private DataTable ObtenerCursosDocente(string idDocente)
         {
+            DataTable cursos = new DataTable();
+            using (SqlConnection connection = new SqlConnection(ConexionBD.CadenaConexion))
+            {
+                try
+                {
+                    connection.Open();
+                    string query = @"
+                                     SELECT 
+                                        c.id_curso, 
+                                        c.Denominacion,
+                                        FROM Curso c
+                                        LEFT JOIN Detalle_curso dc ON c.IdCurso = dc.id_curso";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@id_docente", idDocente);
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(cursos);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al obtener los cursos del docente: " + ex.Message,
+                                   "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            return cursos;
 
         }
-        //        private void CargarCursosDocente()
-        //        {
-        //            DataTable cursos = ObtenerCursosDocente(idDocenteActual); // Usar el ID real
 
-        //            if (cursos.Rows.Count > 0)
-        //            {
-        //                dgvCursos.DataSource = cursos;
-
-        //                // Configurar columnas
-        //                if (dgvCursos.Columns["id_curso"] != null)
-        //                    dgvCursos.Columns["id_curso"].HeaderText = "ID Curso";
-        //                if (dgvCursos.Columns["Denominacion"] != null)
-        //                    dgvCursos.Columns["Denominacion"].HeaderText = "Denominación";
-        //            }
-        //            else
-        //            {
-        //                MessageBox.Show("No tienes cursos asignados", "Información",
-        //                               MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //            }
-        //        }
-        //        private DataTable ObtenerCursosDocente(string idDocente)
-        //        {
-        //            DataTable cursos = new DataTable();
-
-        //            using (SqlConnection connection = new SqlConnection(ConexionBD.CadenaConexion))
-        //            {
-        //                try
-        //                {
-        //                    connection.Open();
-
-        //                    string query = "SELECT id_curso, Denominacion FROM Curso WHERE id_docente = @id_docente";
-
-        //                    using (SqlCommand command = new SqlCommand(query, connection))
-        //                    {
-        //                        command.Parameters.AddWithValue("@id_docente", idDocente);
-
-        //                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
-        //                        {
-        //                            adapter.Fill(cursos);
-        //                        }
-        //                    }
-        //                }
-        //                catch (Exception ex)
-        //                {
-        //                    MessageBox.Show("Error al obtener los cursos del docente: " + ex.Message,
-        //                                   "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //                }
-        //            }
-
-        //            return cursos;
-        //        }
     }
-}
+ }
+    
+
