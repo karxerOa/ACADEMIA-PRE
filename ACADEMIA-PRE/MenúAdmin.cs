@@ -41,6 +41,7 @@ namespace ACADEMIA_PRE
         private void button1_Click(object sender, EventArgs e)
         {
             AbrirFormularioHijo(new PanelesAdmin.PanelInicioAdmin());
+            AbrirFormularioHijo(new PanelesAdmin.PanelGestEstu());
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
@@ -60,6 +61,21 @@ namespace ACADEMIA_PRE
             formHijo.Dock = DockStyle.Fill;
             panelContenedor.Controls.Add(formHijo);
             formHijo.Show();
+        }
+
+        private void btnGestionDocente_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGestionCursos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGestionSimulacros_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

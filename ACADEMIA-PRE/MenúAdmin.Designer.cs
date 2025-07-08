@@ -67,6 +67,7 @@
             this.btnGestionSimulacros.TabIndex = 5;
             this.btnGestionSimulacros.Text = "Gestión simulacros";
             this.btnGestionSimulacros.UseVisualStyleBackColor = false;
+            this.btnGestionSimulacros.Click += new System.EventHandler(this.btnGestionSimulacros_Click);
             // 
             // btnGestionCursos
             // 
@@ -79,6 +80,7 @@
             this.btnGestionCursos.TabIndex = 4;
             this.btnGestionCursos.Text = "Gestión de cursos y áreas";
             this.btnGestionCursos.UseVisualStyleBackColor = false;
+            this.btnGestionCursos.Click += new System.EventHandler(this.btnGestionCursos_Click);
             // 
             // btnGestionDocente
             // 
@@ -91,6 +93,7 @@
             this.btnGestionDocente.TabIndex = 3;
             this.btnGestionDocente.Text = "Gestión docentes";
             this.btnGestionDocente.UseVisualStyleBackColor = false;
+            this.btnGestionDocente.Click += new System.EventHandler(this.btnGestionDocente_Click);
             // 
             // btnGestionEstudiante
             // 

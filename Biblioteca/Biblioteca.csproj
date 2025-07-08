@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Administrador.cs" />
+    <Compile Include="Apoderado.cs" />
     <Compile Include="Area.cs" />
     <Compile Include="Asistencia.cs" />
     <Compile Include="Carrera.cs" />
