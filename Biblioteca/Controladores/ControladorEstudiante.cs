@@ -65,7 +65,7 @@ namespace Biblioteca.Controladores
                 try
                 {
                     // 1. Insertar el Usuario
-                    SqlCommand cmdUsuario = new SqlCommand("InsertarUsuarioo", conn, transaction);
+                    SqlCommand cmdUsuario = new SqlCommand("InsertarUsuario", conn, transaction);
                     cmdUsuario.CommandType = CommandType.StoredProcedure;
 
                     cmdUsuario.Parameters.AddWithValue("@Nombre", estudiante.Usuario.User);
@@ -73,7 +73,7 @@ namespace Biblioteca.Controladores
                     cmdUsuario.Parameters.AddWithValue("@Rol", estudiante.Usuario.Rol);
 
                     // Obtener el ID generado
-                    string idUsuario = (string)cmdUsuario.ExecuteScalar(); // Asegúrate de que tu SP devuelva ese valor
+                    string idUsuario = (string)cmdUsuario.ExecuteScalar(); 
                     estudiante.Usuario.Id_usuario = idUsuario;
 
                     // 2. Insertar el Estudiante

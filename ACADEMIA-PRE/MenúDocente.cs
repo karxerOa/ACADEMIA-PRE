@@ -145,6 +145,10 @@ namespace ACADEMIA_PRE
 
         }
 
+        private void panelMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
  }
     

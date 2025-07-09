@@ -118,7 +118,7 @@ namespace ACADEMIA_PRE.PanelesAdmin
                     MessageBox.Show("Error al registrar el estudiante. Se canceló el registro.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                
+
             }
             catch (Exception ex)
             {
@@ -150,5 +150,21 @@ namespace ACADEMIA_PRE.PanelesAdmin
                 txtCelular.Enabled = false;
             }
         }
+        private void LimpiarCampos()
+        {
+            txtNombreEst.Text = "";
+            txtApePaEs.Text = "";
+            txtApeMaEst.Text = "";
+            txtEdadEst.Text = "";
+            txtDNIest.Text = "";
+            txtNumEst.Text = "";
+            txtUsuario.Text = "";
+            txtContraseña.Text = "";
+            txtApoderado.Text = "";
+            txtCelular.Text = "";
+            comboxCarrera.SelectedIndex = 0;
+            rbNoApoderado.Checked = true;
+        }
+
     }
 }
