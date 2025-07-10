@@ -129,6 +129,9 @@
     <EmbeddedResource Include="MenúDocente.resx">
       <DependentUpon>MenúDocente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MenúEstudiante.resx">
+      <DependentUpon>MenúEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PanelesAdmin\MatricularEstudiante.resx">
       <DependentUpon>MatricularEstudiante.cs</DependentUpon>
     </EmbeddedResource>
