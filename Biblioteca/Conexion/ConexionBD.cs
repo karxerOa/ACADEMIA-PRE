@@ -8,15 +8,7 @@ namespace Biblioteca
 {
     public class ConexionBD
     {
-        public static string CadenaConexion =
-        "Server=tcp:academiapre.database.windows.net,1433;" +
-        "Initial Catalog=AcademiaPre;" +
-        "Persist Security Info=False;" +
-        "User ID=admind123;" +
-        "Password=Admin123;" +
-        "MultipleActiveResultSets=False;" +
-        "Encrypt=True;" +
-        "TrustServerCertificate=False;" +
-        "Connection Timeout=30;";
+        public static string CadenaConexion = "Data Source=LAPTOP-LS9JNIH1;" +
+            "Initial Catalog=AcademiaPre;Integrated Security=True";
     }
 }

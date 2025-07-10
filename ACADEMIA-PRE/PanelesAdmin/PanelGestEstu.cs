@@ -33,5 +33,10 @@ namespace ACADEMIA_PRE.PanelesAdmin
             EstudiantesMatriculas est = new EstudiantesMatriculas();
             est.ShowDialog();
         }
+
+        private void PanelGestEstu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

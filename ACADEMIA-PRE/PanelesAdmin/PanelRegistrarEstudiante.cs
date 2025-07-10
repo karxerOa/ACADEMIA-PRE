@@ -124,6 +124,7 @@ namespace ACADEMIA_PRE.PanelesAdmin
             {
                 MessageBox.Show("Error inesperado: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            LimpiarCampos();
         }
 
         private void rbSíApoderado_CheckedChanged(object sender, EventArgs e)

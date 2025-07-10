@@ -183,5 +183,8 @@
     <Folder Include="Otros\" />
     <Folder Include="PanelesEstudiante\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2883767.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

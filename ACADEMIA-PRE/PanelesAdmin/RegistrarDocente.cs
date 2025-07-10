@@ -8,21 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ACADEMIA_PRE
+namespace ACADEMIA_PRE.PanelesAdmin
 {
-    public partial class MenúEstudiante : Form
+    public partial class RegistrarDocente : Form
     {
-        public MenúEstudiante()
+        public RegistrarDocente()
         {
             InitializeComponent();
-        }
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void MenúEstudiante_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

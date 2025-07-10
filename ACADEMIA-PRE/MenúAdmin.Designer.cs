@@ -44,7 +44,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.panel1.BackColor = System.Drawing.SystemColors.GrayText;
             this.panel1.Controls.Add(this.btnGestionSimulacros);
             this.panel1.Controls.Add(this.btnGestionCursos);
             this.panel1.Controls.Add(this.btnGestionDocente);
@@ -59,7 +59,7 @@
             // 
             // btnGestionSimulacros
             // 
-            this.btnGestionSimulacros.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnGestionSimulacros.BackColor = System.Drawing.Color.Black;
             this.btnGestionSimulacros.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGestionSimulacros.ForeColor = System.Drawing.Color.MintCream;
             this.btnGestionSimulacros.Location = new System.Drawing.Point(0, 382);
@@ -72,7 +72,7 @@
             // 
             // btnGestionCursos
             // 
-            this.btnGestionCursos.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnGestionCursos.BackColor = System.Drawing.Color.Black;
             this.btnGestionCursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGestionCursos.ForeColor = System.Drawing.Color.MintCream;
             this.btnGestionCursos.Location = new System.Drawing.Point(0, 305);
@@ -85,7 +85,7 @@
             // 
             // btnGestionDocente
             // 
-            this.btnGestionDocente.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnGestionDocente.BackColor = System.Drawing.Color.Black;
             this.btnGestionDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGestionDocente.ForeColor = System.Drawing.Color.MintCream;
             this.btnGestionDocente.Location = new System.Drawing.Point(-3, 228);
@@ -98,7 +98,7 @@
             // 
             // btnGestionEstudiante
             // 
-            this.btnGestionEstudiante.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnGestionEstudiante.BackColor = System.Drawing.Color.Black;
             this.btnGestionEstudiante.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGestionEstudiante.ForeColor = System.Drawing.Color.MintCream;
             this.btnGestionEstudiante.Location = new System.Drawing.Point(-3, 151);
@@ -134,7 +134,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(210, 2);
@@ -156,7 +156,7 @@
             // 
             // panelContenedor
             // 
-            this.panelContenedor.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelContenedor.BackColor = System.Drawing.SystemColors.Info;
             this.panelContenedor.Location = new System.Drawing.Point(211, 76);
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(715, 434);

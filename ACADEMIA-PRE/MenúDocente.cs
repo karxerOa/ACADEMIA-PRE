@@ -145,10 +145,11 @@ namespace ACADEMIA_PRE
             return cursos;
         }
 
+
         private void panelMain_Paint(object sender, PaintEventArgs e)
         {
 
-        } 
+        }
         private void btnVerDetalle_Click_1(object sender, EventArgs e)
         {
             try
