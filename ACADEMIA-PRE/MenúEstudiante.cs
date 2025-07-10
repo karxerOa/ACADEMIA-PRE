@@ -16,5 +16,15 @@ namespace ACADEMIA_PRE
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MenúEstudiante_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

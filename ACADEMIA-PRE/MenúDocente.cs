@@ -145,7 +145,7 @@ namespace ACADEMIA_PRE
             return cursos;
         }
 
-<<<<<<< HEAD
+
         private void panelMain_Paint(object sender, PaintEventArgs e)
         {
 
@@ -153,8 +153,6 @@ namespace ACADEMIA_PRE
     }
  }
     
-=======
->>>>>>> 4f7435830d96e1266193dc512b50dfeff558f24b
 
         private void btnVerDetalle_Click_1(object sender, EventArgs e)
         {

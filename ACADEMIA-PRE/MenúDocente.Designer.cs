@@ -120,7 +120,6 @@
             this.btnVerDetalle.TabIndex = 0;
             this.btnVerDetalle.Text = "🔍 Ver Detalle del Curso";
             this.btnVerDetalle.UseVisualStyleBackColor = false;
-            this.btnVerDetalle.Click += new System.EventHandler(this.btnVerDetalle_Click_1);
             // 
             // panelCursos
             // 
