@@ -17,22 +17,19 @@ namespace ACADEMIA_PRE
         public MenúDocente()
         {
             InitializeComponent();
-            idDocenteActual = ""; // Valor por defecto
         }
         //Nombre del docente
-        private string idDocenteActual; // Variable para guardar el ID
 
-        // Constructor modificado para recibir el ID
         public MenúDocente(string idDocente)
         {
             InitializeComponent();
-            idDocenteActual = idDocente; // Guardar el ID
+
         }
 
         private void MenúDocente_Load(object sender, EventArgs e)
         {
             lbl_NombreDocente_Click(this, new EventArgs());
-            //dgvCursos_CellContentClick(sender, new DataGridViewCellEventArgs(0, 0));
+            dgvCursos_CellContentClick(sender, new DataGridViewCellEventArgs(0, 0));
         }
 
         private void lbl_NombreDocente_Click(object sender, EventArgs e)
@@ -70,8 +67,8 @@ namespace ACADEMIA_PRE
                             if (reader.Read())
                             {
                                 string nombre = reader["Nombre"].ToString();
-                                string apellidoPaterno = reader["Apellido_Paterno"].ToString();
-                                string apellidoMaterno = reader["Apellido_Materno"].ToString();
+                                string apellidoPaterno = reader["Apellido_paterno"].ToString();
+                                string apellidoMaterno = reader["Apellido_materno"].ToString();
 
                                 return $"{nombre} {apellidoPaterno} {apellidoMaterno}";
                             }
@@ -86,49 +83,52 @@ namespace ACADEMIA_PRE
             }
 
             return string.Empty;
-
-            //Mostrar cursos del docente
-
-
         }
+
+
+        //Mostrar cursos del docente
 
         private void dgvCursos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            string idDocente = "D001"; // Aquí deberías usar el ID real del login
-            DataTable cursos = ObtenerCursosDocente(idDocente);
+            string idDocente = "D001"; // Ajusta según tu lógica
+
+            DataTable cursos = ObtenerCursosDataTable(idDocente);
+
             if (cursos.Rows.Count > 0)
             {
                 dgvCursos.DataSource = cursos;
-                // Configurar columnas según tu diseño
-                dgvCursos.Columns["id_curso"].HeaderText = "ID Curso";
-                dgvCursos.Columns["Denominacion"].HeaderText = "Denominación";
+                dgvCursos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
             else
             {
-                MessageBox.Show("No tienes cursos asignados", "Información",
+                dgvCursos.DataSource = null;
+                MessageBox.Show("El docente no tiene cursos asignados", "Información",
                                MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+
         }
-
-
-        private DataTable ObtenerCursosDocente(string idDocente)
+        private DataTable ObtenerCursosDataTable(string idDocente)
         {
             DataTable cursos = new DataTable();
+
             using (SqlConnection connection = new SqlConnection(ConexionBD.CadenaConexion))
             {
                 try
                 {
                     connection.Open();
+
+                    // Query que agrupa los temas por curso
                     string query = @"
-                                     SELECT 
-                                        c.id_curso, 
-                                        c.Denominacion,
-                                        FROM Curso c
-                                        LEFT JOIN Detalle_curso dc ON c.IdCurso = dc.id_curso";
+                    SELECT 
+                        c.id_curso, 
+                        c.Denominacion
+                    FROM Curso c
+                    INNER JOIN Detalle_curso dc ON c.id_curso = dc.id_curso";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@id_docente", idDocente);
+
                         using (SqlDataAdapter adapter = new SqlDataAdapter(command))
                         {
                             adapter.Fill(cursos);
@@ -141,10 +141,11 @@ namespace ACADEMIA_PRE
                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            return cursos;
 
+            return cursos;
         }
 
+<<<<<<< HEAD
         private void panelMain_Paint(object sender, PaintEventArgs e)
         {
 
@@ -152,4 +153,45 @@ namespace ACADEMIA_PRE
     }
  }
     
+=======
+>>>>>>> 4f7435830d96e1266193dc512b50dfeff558f24b
 
+        private void btnVerDetalle_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                // Verificar que haya al menos una fila seleccionada en el DataGridView
+                if (dgvCursos.SelectedRows.Count > 0)
+                {
+                    // Obtener el ID del curso seleccionado (asegurando no nulo)
+                    var selectedRow = dgvCursos.SelectedRows[0];
+                    string idCurso = selectedRow.Cells["id_curso"].Value?.ToString();
+                    string denominacionCurso = selectedRow.Cells["Denominacion"].Value?.ToString();
+
+                    // Validar que se hayan obtenido datos válidos
+                    if (!string.IsNullOrEmpty(idCurso) && !string.IsNullOrEmpty(denominacionCurso))
+                    {
+                        // Crear y mostrar el formulario de detalle, pasándole los datos necesarios
+                        DetalleCurso formDetalle = new DetalleCurso(idCurso, denominacionCurso);
+                        formDetalle.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("El curso seleccionado no tiene datos válidos.",
+                                        "Error de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, seleccione un curso para ver el detalle.",
+                                    "Selección requerida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error al abrir el detalle del curso: " + ex.Message,
+                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+    }
+}
