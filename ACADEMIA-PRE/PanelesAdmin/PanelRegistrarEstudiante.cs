@@ -166,5 +166,9 @@ namespace ACADEMIA_PRE.PanelesAdmin
             rbNoApoderado.Checked = true;
         }
 
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

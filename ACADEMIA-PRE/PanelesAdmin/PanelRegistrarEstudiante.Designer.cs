@@ -61,8 +61,8 @@
             this.label15 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.rbSíApoderado = new System.Windows.Forms.RadioButton();
             this.rbNoApoderado = new System.Windows.Forms.RadioButton();
+            this.rbSíApoderado = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbUsuario.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -354,6 +354,7 @@
             this.groupBox1.TabIndex = 30;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "APODERADO";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label16
             // 
@@ -363,18 +364,6 @@
             this.label16.Size = new System.Drawing.Size(100, 13);
             this.label16.TabIndex = 33;
             this.label16.Text = "¿Tiene apoderado?";
-            // 
-            // rbSíApoderado
-            // 
-            this.rbSíApoderado.AutoSize = true;
-            this.rbSíApoderado.Location = new System.Drawing.Point(289, 77);
-            this.rbSíApoderado.Name = "rbSíApoderado";
-            this.rbSíApoderado.Size = new System.Drawing.Size(36, 17);
-            this.rbSíApoderado.TabIndex = 31;
-            this.rbSíApoderado.TabStop = true;
-            this.rbSíApoderado.Text = "Sí";
-            this.rbSíApoderado.UseVisualStyleBackColor = true;
-            this.rbSíApoderado.CheckedChanged += new System.EventHandler(this.rbSíApoderado_CheckedChanged);
             // 
             // rbNoApoderado
             // 
@@ -387,6 +376,18 @@
             this.rbNoApoderado.Text = "No";
             this.rbNoApoderado.UseVisualStyleBackColor = true;
             this.rbNoApoderado.CheckedChanged += new System.EventHandler(this.rbNoApoderado_CheckedChanged);
+            // 
+            // rbSíApoderado
+            // 
+            this.rbSíApoderado.AutoSize = true;
+            this.rbSíApoderado.Location = new System.Drawing.Point(289, 77);
+            this.rbSíApoderado.Name = "rbSíApoderado";
+            this.rbSíApoderado.Size = new System.Drawing.Size(36, 17);
+            this.rbSíApoderado.TabIndex = 31;
+            this.rbSíApoderado.TabStop = true;
+            this.rbSíApoderado.Text = "Sí";
+            this.rbSíApoderado.UseVisualStyleBackColor = true;
+            this.rbSíApoderado.CheckedChanged += new System.EventHandler(this.rbSíApoderado_CheckedChanged);
             // 
             // PanelRegistrarEstudiante
             // 
