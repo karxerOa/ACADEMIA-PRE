@@ -53,6 +53,11 @@ namespace ACADEMIA_PRE
                 MessageBox.Show("Error al obtener el nombre del curso: " + ex.Message);
             }
         }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
     
 }
